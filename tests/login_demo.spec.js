@@ -11,7 +11,7 @@ test('demo login test 1', async({page}) => {
 
 })
 
-test('demo login test 2', async({page}) => {
+test.only('demo login test 2', async({page}) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
 
@@ -24,10 +24,9 @@ test('demo login test 2', async({page}) => {
     
     await page.getByRole('menuitem', { name: 'Logout' }).click();
 
-  // ---------------------
 
   })
 
-  test.only('demo login test 3', async({page}) => {
+  test('demo login test 3', async({page}) => {
     await page.goto('https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F')
     await page.pause() })
